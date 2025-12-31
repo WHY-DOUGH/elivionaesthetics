@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import banner from "@/assets/banner.png";
 
 const HeroSection = () => {
   return (
@@ -7,11 +7,11 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src={heroBg}
-          alt="Luxury aesthetics clinic treatment room"
-          className="w-full h-full object-cover"
+          src={banner}
+          alt="Elivion Aesthetics - Elevate Your Beauty"
+          className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-transparent" />
       </div>
 
       {/* Content */}
