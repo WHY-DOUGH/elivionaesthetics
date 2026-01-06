@@ -80,33 +80,32 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-6">
-            {contactInfo.map((item) => (
-              <div
-                key={item.label}
-                className="flex gap-4 p-6 bg-background rounded-xl shadow-soft"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 text-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-1">
-                    {item.label}
-                  </h3>
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      target={item.href.startsWith("http") ? "_blank" : undefined}
-                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                    >
-                      {item.value}
-                    </a>
-                  ) : (
+            {contactInfo.map((item) => {
+              const CardWrapper = item.href ? 'a' : 'div';
+              const cardProps = item.href ? {
+                href: item.href,
+                target: item.href.startsWith("http") ? "_blank" : undefined,
+                rel: item.href.startsWith("http") ? "noopener noreferrer" : undefined,
+              } : {};
+              
+              return (
+                <CardWrapper
+                  key={item.label}
+                  {...cardProps}
+                  className={`flex gap-4 p-6 bg-background rounded-xl shadow-soft ${item.href ? 'cursor-pointer hover:shadow-md transition-shadow' : ''}`}
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                      {item.label}
+                    </h3>
                     <p className="text-muted-foreground text-sm">{item.value}</p>
-                  )}
-                </div>
-              </div>
-            ))}
+                  </div>
+                </CardWrapper>
+              );
+            })}
 
             {/* Social Links */}
             <div className="pt-6">
