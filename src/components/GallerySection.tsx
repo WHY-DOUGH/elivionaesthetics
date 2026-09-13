@@ -24,8 +24,7 @@ const GallerySection = () => {
             <span className="italic"> Our World</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Experience the serene atmosphere and professional care that 
-            awaits you at Elivion Aesthetics.
+            Experience the serene atmosphere and professional care that awaits you at Elivion Aesthetics.
           </p>
         </div>
 

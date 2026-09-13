@@ -19,6 +19,12 @@ const reviews = [
     rating: 5,
     text: "From consultation to treatment, everything was seamless. I appreciate how they personalized the plan for my concerns.",
   },
+  {
+    name: "Ofelia Castro",
+    treatment: "Rejuvinating Serum",
+    rating: 5,
+    text: "So good!!!",
+  },
 ];
 
 const ReviewsSection = () => {
