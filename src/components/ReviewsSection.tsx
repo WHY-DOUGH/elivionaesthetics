@@ -1,12 +1,10 @@
-import reviewPlaceholder from "@/assets/placeholder.svg";
-
 const reviewImages = [
-  { src: reviewPlaceholder, alt: "Client review screenshot 1" },
-  { src: reviewPlaceholder, alt: "Client review screenshot 2" },
-  { src: reviewPlaceholder, alt: "Client review screenshot 3" },
-  { src: reviewPlaceholder, alt: "Client review screenshot 4" },
-  { src: reviewPlaceholder, alt: "Client review screenshot 5" },
-  { src: reviewPlaceholder, alt: "Client review screenshot 6" },
+  { src: "/placeholder.svg", alt: "Client review screenshot 1" },
+  { src: "/placeholder.svg", alt: "Client review screenshot 2" },
+  { src: "/placeholder.svg", alt: "Client review screenshot 3" },
+  { src: "/placeholder.svg", alt: "Client review screenshot 4" },
+  { src: "/placeholder.svg", alt: "Client review screenshot 5" },
+  { src: "/placeholder.svg", alt: "Client review screenshot 6" },
 ];
 
 const ReviewsSection = () => {
